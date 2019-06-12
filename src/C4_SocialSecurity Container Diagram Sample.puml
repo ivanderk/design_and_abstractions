@@ -12,7 +12,7 @@ title Container Diagram for Social Security Use Case
 Person_Ext(user, "Social Security Benefit Claimant")
 Person_Ext(adminuser, "Social Security officer")
 
-System_Boundary(c1, "Social Security App"){
+System_Boundary(c1, "Social Security System"){
     
     Container(mobile_app, "Mobile Application", "devon4X (Xamarin)", "Allows users to upload documents (pay-slips etc) and request status reports")
 
@@ -28,7 +28,7 @@ System_Boundary(c1, "Social Security App"){
 
     ContainerDb(log_db, "Log DB", "MongoDB 3.0.x", "Stores Log Info")
 
-    Container(processor, "Processor", "devon4node", "Processes file uploads; regsteres at backoffice; prepares for batch processes")
+    Container(processor, "Processor", "devon4j", "Processes file uploads; regsteres at backoffice; prepares for batch processes")
 
     ContainerDb(filesystem, "File System", "File Server Cluster (NTFS)", "Stores Files for batch processing by backoffice")
 
